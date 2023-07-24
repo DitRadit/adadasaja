@@ -34,7 +34,7 @@
  <style type="text/tailwindcss">
   @layer components {
    .nav-item {
-    @apply transition hover:text-gray-500 text-white lg:text-2xl text-xl 
+    @apply transition hover:underline underline-offset-4 text-white lg:text-2xl text-xl 
    }
    .point-green {
      @apply  bg-[#00E909] h-[46px] w-[48px] transition hover:bg-green-400 rounded-[100px] cursor-pointer shadow-2xl
@@ -49,7 +49,7 @@
      @apply  bg-white h-[46px] w-[48px] transition hover:bg-gray-200 rounded-[100px] cursor-pointer shadow-2xl
    }
    .btn-answer {
-    @apply border border-4 border-black bg-black text-[56px] px-20 py-10 shadow-2xl transition hover:shadow-xl hover:bg-white hover:text-black rounded-[40px] text-white font-bold hover:!scale-105
+    @apply border border-4 border-black bg-white text-[56px] px-20 py-10 shadow-2xl transition hover:shadow-xl hover:bg-black hover:text-white rounded-[40px] text-black font-bold hover:!scale-105
    }
   }
   @media (max-width: 767px) {
@@ -112,7 +112,7 @@
           <li style="padding: 10px;"><a href="" class="nav-item">ABOUT US</a></li>
           <li style="padding: 10px;"><a href="" class="nav-item">CONTACT US</a></li>
           <li style="padding: 10px;">
-            <button style="text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);" class="bg-[#B41D1D] text-white px-8 py-4 rounded-2xl font-bold text-2xl transition hover:bg-red-500 hover:text-[#B41D1D] border border-[#B41D1D]">
+            <button style="text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);" class="bg-[#B41D1D] text-white px-8 py-4 rounded-2xl font-bold text-2xl transition hover:bg-white hover:text-black">
               PLAY
             </button>
           </li>
@@ -122,67 +122,59 @@
   </header>
   
   
- <main>
-  <!-- game -->
-  <section class="bg-[#282828] min-h-[400px] rounded-b-[100px] px-4">
-   <div class="container mx-auto lg:pt-56 pt-64">
-    <!-- point -->
-    <div class="flex gap-2 justify-evenly">
-     <div data-aos="zoom-in" data-aos-delay="" class="point-green">
-      <img src="img/img-3.png" alt="" class="-mt-24 -ml-8 min-w-[100px] animate-bounce">
-     </div>
-     <div data-aos="zoom-in" data-aos-delay="100" class="point-blue"></div>
-     <div data-aos="zoom-in" data-aos-delay="200" class="point-blue"></div>
-     <div data-aos="zoom-in" data-aos-delay="300" class="point-blue"></div>
-     <div data-aos="zoom-in" data-aos-delay="400" class="point-blue"></div>
-     <div data-aos="zoom-in" data-aos-delay="500" class="point-blue"></div>
-     <div data-aos="zoom-in" data-aos-delay="600" class="point-red">
-      <img src="img/img-2.png" alt="" class="-mt-24 -ml-8 min-w-[100px] animate-bounce">
-     </div>
-     <div data-aos="zoom-in" data-aos-delay="700" class="point-blue"></div>
-     <div data-aos="zoom-in" data-aos-delay="800" class="point-blue"></div>
-     <div data-aos="zoom-in" data-aos-delay="900" class="point-white">
-      <img src="img/img-1.png" alt="" class="-mt-20 -ml-2 min-w-[100px] animate-bounce">
-     </div>
-    </div>
-   </div>
-  </section>
-  <!-- question -->
-  <section class="flex justify-center px-4" data-aos="fade-up">
-   <!-- content -->
-   <div
-    class="transition cursor-pointer max-w-[1200px] p-4 rounded-2xl lg:-mt-20 mt-10 bg-white shadow-2xl hover:shadow-xl">
-    <!-- title -->
-    <div class="flex justify-between">
-     <h2 class="text-[#CA0000] font-bold text-[50px]">QUESTION NO.1</h2>
-     <p class="text-[#201DB4] font-bold text-[30px]">6 STEPS AWAY</p>
-    </div>
-    <p class="text-[36px] mt-10">Lorem Ipsum is simply dummy text of the printing and typesetting a. Lorem Ipsum has
-     been
-     the
-     industry's standard
-     dummy text ever since the 1500s???</p>
-   </div>
-  </section>
-  <!-- answer -->
-  <section class="mx-auto container grid gap-20 lg:grid-cols-2 grid-cols-1 mt-20 px-4">
-   <button  class="btn-answer">ANSWER 1</button>
-   <button  class="btn-answer">ANSWER 2</button>
-   <button  class="btn-answer">ANSWER 3</button>
-   <button  class="btn-answer">ANSWER 4</button>
-  </section>
-  <br>
-  <!-- retired -->
-  <section class="bg-[#282828] min-h-[400px] rounded-t-[100px] mt-20  flex justify-center items-center flex-col px-4">
-   <div class="container mx-auto  flex justify-center items-center flex-col">
-    <p class="text-white  text-3xl max-w-[650px] text-center mb-10">Lorem Ipsum is simply dummy text of the printing and
-     typesetting industry. </p>
-    <button
-     class="text-[46px] font-bold text-white bg-[#201DB4] shadow-2xl transition hover:transition-xl px-10 py-4 rounded-2xl"
-     style="text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);">RETIRED</button>
-   </div>
-  </section>
- </main>
+  <main>
+    <!-- game -->
+    <section class="bg-[#282828] min-h-[400px] rounded-b-[100px] px-4">
+      <div class="container mx-auto lg:pt-56 pt-72">
+        <!-- point -->
+        <div class="flex gap-2 justify-evenly">
+          <div data-aos="zoom-in" data-aos-delay="" class="point-blue">
+            <img src="img/img-3.png" alt="" class="image-A -mt-24 -ml-8 min-w-[100px] animate-bounce">
+          </div>
+          <div data-aos="zoom-in" data-aos-delay="100" class="point-blue"></div>
+          <div data-aos="zoom-in" data-aos-delay="200" class="point-blue"></div>
+          <div data-aos="zoom-in" data-aos-delay="300" class="point-blue"></div>
+          <div data-aos="zoom-in" data-aos-delay="400" class="point-blue"></div>
+          <div data-aos="zoom-in" data-aos-delay="500" class="point-blue"></div>
+          <div data-aos="zoom-in" data-aos-delay="600" class="point-blue">
+            <img src="img/img-2.png" alt="" class="image-B -mt-24 -ml-8 min-w-[100px] animate-bounce">
+          </div>
+          <div data-aos="zoom-in" data-aos-delay="700" class="point-blue"></div>
+          <div data-aos="zoom-in" data-aos-delay="800" class="point-blue"></div>
+          <div data-aos="zoom-in" data-aos-delay="900" class="point-blue">
+            <img src="img/img-1.png" alt="" class="-mt-20 -ml-2 min-w-[100px] animate-bounce">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- question -->
+    <section class="flex justify-center px-4" data-aos="fade-up">
+      <!-- content -->
+      <div class="transition cursor-pointer max-w-[1200px] p-4 rounded-2xl lg:-mt-20 mt-10 bg-white shadow-2xl hover:shadow-xl">
+        <!-- title -->
+        <h2 class="text-[#CA0000] font-bold text-[50px] pl-5" id="question-number">QUESTION NO.1</h2>
+        <p class="text-[#201DB4] font-bold text-[30px]" id="steps-away">6 STEPS AWAY</p>
+        <p class="text-[36px] mt-10" id="question-text">Lorem Ipsum is simply dummy text of the printing and typesetting a. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s???</p>
+      </div>
+    </section>
+    <!-- answer -->
+    <section class="mx-auto container grid gap-20 lg:grid-cols-2 grid-cols-1 mt-20 px-4 w-fit" id="answers">
+      <button class="btn-answer">ANSWER 1</button>
+      <button class="btn-answer">ANSWER 2</button>
+      <button class="btn-answer">ANSWER 3</button>
+      <button class="btn-answer">ANSWER 4</button>
+    </section>
+    <br>
+    <!-- retired -->
+    <section class="bg-[#282828] min-h-[400px] rounded-t-[100px] mt-20 flex justify-center items-center flex-col px-4" id="retired-section">
+      <div class="container mx-auto flex justify-center items-center flex-col">
+        <p class="text-white text-3xl max-w-[650px] text-center mb-10" id="retired-message">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        <button class="text-[46px] font-bold text-white bg-[#201DB4] shadow-2xl transition hover:transition-xl px-10 py-4 rounded-2xl" id="retired-button" style="text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);">RETIRED</button>
+      </div>
+    </section>
+  </main>
+  
+  
  <footer class="bg-[#7E7E7E] px-10 py-10 flex justify-evenly items-center lg:flex-row flex-col gap-10">
   <p class="text-2xl font-bold text-white">@copyright progress 2023</p>
   <ul class="text-2xl font-bold flex gap-4 text-white">
@@ -213,6 +205,7 @@
  </footer>
 </body>
 <!-- aos -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
   const hamburgerButton = document.getElementById('hamburger-button');
   const menu = document.getElementById('menu');
@@ -228,6 +221,138 @@
       menu.classList.add('hidden');
     });
   }
+</script>
+<script>
+  // Quiz data
+  const questions = [
+  {
+    question: "Apa ibukota Indonesia?",
+    choices: ["Jakarta", "Bali", "Surabaya", "Bandung"],
+    correctAnswer: 0, // Index of the correct choice (0-based)
+  },
+  {
+    question: "Pulau di Indonesia yang terkenal dengan satwa liar yang unik dan beragam, termasuk Komodo adalah?",
+    choices: ["Jawa", "Sumatra", "Flores", "Papua"],
+    correctAnswer: 2, // Index of the correct choice (0-based)
+  },
+  {
+    question: "Agama terbesar di Indonesia adalah?",
+    choices: ["Hindu", "Kristen", "Islam", "Buddha"],
+    correctAnswer: 2, // Index of the correct choice (0-based)
+  },
+  {
+    question: "Pulau di Indonesia yang terkenal dengan seni tradisionalnya, termasuk batik dan wayang kulit adalah?",
+    choices: ["Bali", "Sulawesi", "Lombok", "Kalimantan"],
+    correctAnswer: 0, // Index of the correct choice (0-based)
+  },
+  {
+    question: "Maskapai penerbangan nasional Indonesia adalah?",
+    choices: ["Lion Air", "Garuda Indonesia", "AirAsia Indonesia", "Batik Air"],
+    correctAnswer: 1, // Index of the correct choice (0-based)
+  },
+  {
+    question: "Gunung berapi di Indonesia yang meletus pada tahun 2018 dan menyebabkan tsunami di sekitar Selat Sunda adalah?",
+    choices: ["Gunung Agung", "Gunung Bromo", "Gunung Sinabung", "Anak Krakatau"],
+    correctAnswer: 3, // Index of the correct choice (0-based)
+  },
+  {
+    question: "Selat yang memisahkan pulau Jawa dan Sumatra di Indonesia adalah?",
+    choices: ["Selat Malaka", "Selat Sunda", "Selat Lombok", "Selat Makassar"],
+    correctAnswer: 1, // Index of the correct choice (0-based)
+  },
+  {
+    question: "Siapakah Presiden Indonesia pertama?",
+    choices: ["Sukarno", "Suharto", "Joko Widodo", "Megawati Sukarnoputri"],
+    correctAnswer: 0, // Index of the correct choice (0-based)
+  },
+  {
+    question: "Tarian tradisional Indonesia yang ditandai dengan gerakan tangan yang rumit dan kostum yang berwarna-warni adalah?",
+    choices: ["Tari Pendet", "Tari Kecak", "Tari Legong", "Tari Barong"],
+    correctAnswer: 2, // Index of the correct choice (0-based)
+  },
+  {
+    question: "Provinsi di Indonesia yang terkenal dengan produksi kopi, termasuk kopi 'Kopi Luwak' adalah?",
+    choices: ["Aceh", "Jawa Barat", "Jawa Timur", "Sumatra Utara"],
+    correctAnswer: 3, // Index of the correct choice (0-based)
+  },
+];
+
+  // Variables to keep track of game state
+  let currentQuestion = 0;
+  let imageAValue = 0;
+  let imageBValue = 6;
+
+  // Function to update the question and choices
+  function updateQuestion() {
+    const questionData = questions[currentQuestion];
+    $("#question-number").text(`QUESTION NO.${currentQuestion + 1}`);
+    $("#steps-away").text(`${imageBValue - imageAValue} STEPS AWAY`);
+    $("#question-text").text(questionData.question);
+    const $answers = $("#answers").empty();
+    questionData.choices.forEach((choice, index) => {
+      $answers.append(`<button class="btn-answer" data-answer="${index}">${choice}</button>`);
+    });
+    moveImages();
+    $("#steps-away").text(`${Math.abs(imageBValue - imageAValue)} STEPS AWAY`);
+  }
+
+  // Function to handle user's answer
+  // Function to handle user's answer
+function handleAnswer(answer) {
+  const questionData = questions[currentQuestion];
+  if (answer === questionData.correctAnswer) {
+    if (imageAValue + 1 === imageBValue) {
+      // User wins
+      window.location.href = "successful.html";
+    } else {
+      imageAValue++;
+    }
+  } else {
+    // Move this increment inside the else block for incorrect answers only
+    imageBValue++;
+    if (imageBValue === 9) {
+      // User loses
+      window.location.href = "failure.html";
+    }
+  }
+  
+  // Increment currentQuestion to move to the next question, regardless of the user's answer
+  currentQuestion++;
+
+  if (currentQuestion === questions.length) {
+    // User answered all questions correctly
+    window.location.href = "successful.html";
+  } else {
+    updateQuestion(); // Call updateQuestion() to load the next question
+  }
+}
+
+
+
+   // Function to move the images to the next points
+   function moveImages() {
+    const $imageA = $(".image-A");
+    const $imageB = $(".image-B");
+
+    if (imageAValue > 0 && imageAValue <= 10) {
+    const nextImageAPoint = imageAValue;
+    $imageA.appendTo($(".point-blue").eq(nextImageAPoint));
+  }
+
+  // Move image B when its value changes
+  if (imageBValue >= 7 && imageBValue <= 10) {
+    const nextImageBPoint = imageBValue;
+    $imageB.appendTo($(".point-blue").eq(nextImageBPoint));
+  }
+  }
+  // Event listener for answer buttons
+  $(document).on("click", ".btn-answer", function () {
+    const selectedAnswer = parseInt($(this).attr("data-answer"));
+    handleAnswer(selectedAnswer);
+  });
+
+  // Initial setup
+  updateQuestion();
 </script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
