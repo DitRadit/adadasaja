@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz Home Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
@@ -14,7 +15,10 @@
  <style>
     * {
      font-family: 'Montserrat', sans-serif;
+     scroll-behavior: smooth;
     }
+    
+
    </style>
    <!-- tailwand -->
    <script src="https://cdn.tailwindcss.com"></script>
@@ -39,7 +43,7 @@
        @apply  bg-[#00E909] h-[46px] w-[48px] transition hover:bg-green-400 rounded-[100px] cursor-pointer shadow-2xl
      } */
      .point-blue {
-       @apply  bg-[#E44C10] h-[46px] w-[48px] transition hover:bg-green-400 rounded-[100px] cursor-pointer shadow-2xl
+       @apply  bg-[#00DDB5] h-[46px] w-[48px] transition hover:bg-green-400 rounded-[100px] cursor-pointer shadow-2xl
      }
      /* .point-red {
        @apply  bg-red-600 h-[46px] w-[48px] transition hover:bg-red-500 rounded-[100px] cursor-pointer shadow-2xl
@@ -64,15 +68,26 @@
       zoom: 70%; /* Adjust the zoom level as needed */
       transform-origin: top center; /* Set the origin for the zoom */
     }
+
+
+    .card {
+      transition: all 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
   </style>
   </head>
   
   
   <body>
+    <!-- navbar section -->
     <header class="bg-[#ffffff] shadow-2xl fixed w-full z-20 px-4" data-aos="fade-down">
       <nav class="flex flex-col lg:flex-row justify-between items-center container mx-auto p-4">
         <div>
-  <a href="index.html">
+          <a href="#hero">
           <svg width="100" height="100%" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <rect width="512" height="512" fill="url(#pattern0)"/>
             <defs>
@@ -94,12 +109,12 @@
           </button>
     
           <ul id="menu" class="hidden lg:flex items-center flex-col lg:flex-row gap-8 font-bold ml-0 lg:ml-12">
-            <li style="padding: 10px;"><a href="index.html" class="nav-item">HOME</a></li>
-            <li style="padding: 10px;"><a href="" class="nav-item">ABOUT US</a></li>
-            <li style="padding: 10px;"><a href="" class="nav-item">CONTACT US</a></li>
+            <li style="padding: 10px;"><a href="#hero" class="nav-item">HOME</a></li>
+            <li style="padding: 10px;"><a href="#about-us" class="nav-item">ABOUT US</a></li>
+            <li style="padding: 10px;"><a href="#contact-us" class="nav-item">CONTACT US</a></li>
             <li style="padding: 10px;">
               <a href="quiz.html">
-              <button style="text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);" class="bg-[#FFC41D] text-white px-8 py-4 rounded-2xl font-bold text-2xl transition hover:bg-[#00DDB5] hover:text-white">
+              <button style="text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);" class="bg-[#3333CB] text-white px-8 py-4 rounded-2xl font-bold text-2xl transition hover:bg-[#00DDB5] hover:text-white">
                 PLAY
               </button>
             </a>
@@ -111,45 +126,183 @@
     <br>
     <br>
     <br>
+    <!-- navbar section end -->
+   
 
-    <main>
-    <!-- Start block -->
-    <section class="bg-white">
-        <div class="grid max-w-screen-2xl px-4 pt-32 pb-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12 lg:pt-28">
-            <div class="mr-auto place-self-center lg:col-span-7">
-                <h1 class="max-w-2xl mb-4 text-4xl font-extrabold leading-none tracking-tight md:text-5xl xl:text-6xl ">Building digital <br>products & brands.</h1>
-                <p class="max-w-2xl mb-6 font-light text-black lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">This free and open-source landing page template was built using the utility classes from <a href="https://tailwindcss.com" class="hover:underline">Tailwind CSS</a> and based on the components from the <a href="https://flowbite.com/docs/getting-started/introduction/" class="hover:underline">Flowbite Library</a> and the <a href="https://flowbite.com/blocks/" class="hover:underline">Blocks System</a>.</p>
-                <div class="space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
-                    <a href="quiz.html" class="inline-flex items-center justify-center w-full px-5 py-3 text-2xl font-medium text-center text-gray-900 border border-gray-200 rounded-lg sm:w-auto hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 "> Play
-                    </a> 
+
+    <main >
+    <!-- hero section -->
+    <section class="pt-20" data-aos="fade-up" id="hero">
+        <div class="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
+            <div class="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left" style="max-width: 40rem;">
+                <h1 class="text-4xl font-bold sm:text-6xl">Quiz <span class="text-[#3333CB]">Cops</span> : Catch the <span class="text-[#E44C10]">Robber</span>!
+                </h1>
+                <p class="mt-6 mb-8 text-xl sm:mb-12">Selamat datang di Quiz Cops, petualangan kuis terbaik di mana Anda menjadi seorang polisi yang mengejar seorang perampok cerdik melalui pertanyaan-pertanyaan acak yang menantang. Uji pengetahuan Anda, tangkap perampoknya, dan buka kunci kesuksesan atau hadapi kegagalan. Apakah Anda siap menghadapi tantangannya?
+                </p>
+                <div class="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
+                  <a href="quiz.html">
+                    <button style="text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);" class="bg-[#3333CB] text-white px-8 py-4 rounded-2xl font-bold text-2xl transition hover:bg-[#00DDB5] hover:text-white">
+                      PLAY
+                    </button>
                 </div>
             </div>
-            <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
-                <img src="img/police_4289963.png" alt="hero image">
-            </div>                
+            <div class="flex items-center justify-center p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128" >
+                <img src="img/police_4289963.png" alt="" class="object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128" >
+            </div>
         </div>
     </section>
-        <section class="bg-[#ffffff] shadow-2xl min-h-[400px] rounded-t-[100px] mt-20 flex justify-center items-center flex-col px-4" id="retired-section">
-            <div class="container mx-auto flex justify-center items-center flex-col">
-            <h2 class="text-black text-4xl max-w-[650px] text-center mb-10 font-bold">LOREM IPSUM</h2>
-              <p class="text-black text-3xl max-w-[650px] text-center mb-10" id="retired-message">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-              <img src="img/screencapture-127-0-0-1-5500-quiz-html-2023-07-26-11_44_28.png" alt="">
-              
-              <a href="quiz.html">
-              <button class="text-[46px] font-bold text-white bg-[#FF250D] shadow-2xl transition hover:bg-[#E44C10] hover:text-black px-10 py-4 rounded-2xl" id="retired-button" style="text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);">PLAY</button>
-            </a>
+<br><br><br>
+ <!-- hero section end -->
+
+
+<!-- card section -->
+<section>
+  <div class="container mx-auto py-8">
+    <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
+      <!-- Card 1 -->
+      <div class="card bg-white rounded-lg shadow-lg p-6" data-aos="fade-up">
+        <div class="flex items-center justify-center mb-4">
+          <i class="fas fa-check-circle text-4xl text-green-600"></i>
+        </div>
+        <br>
+        <h3 class="text-2xl font-bold text-gray-800 mb-2">Jawab dengan Benar untuk Menangkap Perampoknya</h3> <br>
+        <p class="text-gray-600 text-lg">Setiap jawaban yang benar membawa Anda lebih dekat untuk menangkap perampoknya. Tetap waspada dan pilihlah opsi yang tepat!</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card bg-white rounded-lg shadow-lg p-6" data-aos="fade-up">
+        <div class="flex items-center justify-center mb-4">
+          <i class="fas fa-times-circle text-4xl text-red-600"></i>
+        </div>
+        <br>
+        <h3 class="text-2xl font-bold text-gray-800 mb-2">Hindari Kesalahan untuk Mencegah Kaburnya Perampok</h3> <br>
+        <p class="text-gray-600 text-lg">Hati-hati dengan jawaban yang salah! Setiap kesalahan memungkinkan perampok untuk melarikan diri lebih jauh. Tetap fokus dan hindari kesalahan.</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card bg-white rounded-lg shadow-lg p-6" data-aos="fade-up">
+        <div class="flex items-center justify-center mb-4">
+          <i class="fas fa-balance-scale text-4xl text-blue-600"></i>
+        </div>
+        <br>
+        <h3 class="text-2xl font-bold text-gray-800 mb-2">Capai Kesetaraan untuk Meraih Kemenangan
+        </h3> <br>
+        <p class="text-gray-600 text-lg">Kunci kesuksesan adalah keseimbangan. Ketika "Polisi" dan "Perampok" berada pada posisi yang sama, Anda akan menangkap perampoknya dan meraih kemenangan.</p>
+      </div>
+    </div>
+  </div>
+  </section>
+  <br>
+  <br>
+  <br>
+  <!-- card section end -->
+
+
+<!-- about-us section -->
+  <section class="flex items-center bg-white-100 xl:h-screen font-poppins" data-aos="fade-right" id="about-us">
+    <div class="justify-center flex-1 max-w-[90rem] py-4 mx-auto lg:py-6 md:px-6">
+        <div class="flex flex-wrap ">
+            <div class="w-full px-4 mb-10 lg:w-1/2 lg:mb-0 ">
+                <span class="text-xl font-semibold text-blue-400 uppercase">
+                    About Us</span>
+                <h2 class="mt-2 mb-6 text-3xl font-bold ">
+                    UKM PROGRESS</h2>
+                <p class="mb-10 text-gray-600 text-xl ">
+                  UKM PROGRESS adalah salah satu Unit Kegiatan Mahasiswa yang menjadi wadah bagi kumpulan mahasiswa ITB STIKOM Bali yang memiliki minat dan ingin belajar di bidang programming. Salah satu langkah progresif kami dalam memperkuat komunitas dan mengasah kemampuan anggota kami adalah dengan menciptakan Quiz Web App. Keputusan untuk membangun aplikasi ini didasarkan pada beberapa alasan yang kuat. <br> <br>
+                  "Mendorong Pembelajaran Aktif"
+                  <br>
+                  <br>
+                  "Memperdalam Pemahaman Materi"
+                  <br>
+                  <br>
+                  "Meningkatkan Keterampilan Teknis"</p>
             </div>
-          </section>
+            <div class="w-full px-4 mb-10 lg:w-1/2 lg:mb-0 card">
+                <div class="relative">
+                    <img src="img/coding-man-min-1024x683-1.jpg" alt="aboutimage"
+                        class="relative z-10 object-cover w-full h-full rounded">
+                    <div class="absolute hidden w-full h-full bg-[#3333CB] rounded -bottom-6 left-6 lg:block">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- about-us section end -->
+
+<!-- contact-us section -->
+<section class="relative z-10 overflow-hidden bg-white py-20 lg:py-[120px]" id="contact-us">
+  <div class="container mx-auto">
+    <div class="-mx-4 flex flex-wrap lg:justify-between">
+      <div class="w-full px-4 lg:w-1/2 xl:w-6/12">
+        <div class="mb-12 max-w-[570px] lg:mb-0">
+          <span class="text-xl font-semibold text-blue-400 uppercase">
+            Contact Us</span>
+          <h2
+            class="text-black mb-6 text-[32px] font-bold uppercase sm:text-[40px] lg:text-[36px] xl:text-[40px]"
+          >
+            GET IN TOUCH WITH <span class="text-[#00DDB5]">US</span>
+          </h2>
+          <p class="text-body-color mb-9 text-lg leading-relaxed">
+            Apakah Anda memiliki pertanyaan, saran, atau umpan balik? Kami siap mendengar! Jangan ragu untuk menghubungi tim kami yang ramah!
+          </p>
+          <div class="mb-8 flex w-full max-w-[370px]">
+            <div class="bg-primary text-primary mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-opacity-5 sm:h-[70px] sm:max-w-[70px]">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" width="40" height="40"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg>
+            </div>
+            
+            <div class="w-full">
+              <h4 class="text-black mb-1 text-xl font-bold">Our Location</h4>
+              <p class="text-body-color text-base">
+                Jl. Raya Puputan No.86, Dangin Puri Klod, Kec. Denpasar Tim., Kota Denpasar, Bali 80234
+              </p>
+            </div>
+          </div>
+          <div class="mb-8 flex w-full max-w-[370px]">
+            
+            <div
+              class="bg-primary text-primary mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-opacity-5 sm:h-[70px] sm:max-w-[70px]"
+            >        <a href="https://www.instagram.com/progress.stikombali/">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="40" height="40"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+            </div>
+            <div class="w-full">
+              <h4 class="text-black mb-1 text-xl font-bold">Instagram Account</h4>
+              <p class="text-body-color text-base">progress.stikombali</p>
+            </div>
+          </a>
+          </div>
+          <div class="mb-8 flex w-full max-w-[370px]">
+            <div
+              class="bg-primary text-primary mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-opacity-5 sm:h-[70px] sm:max-w-[70px]"
+            >
+              <a href="https://www.instagram.com/infinityprogress.id/">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"  width="40" height="40"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+            </div>
+            <div class="w-full">
+              <h4 class="text-black mb-1 text-xl font-bold">Infinity</h4>
+              <p class="text-body-color text-base">infinityprogress.id</p>
+            </div>
+          </a>
+          </div>
+        </div>
+      </div>
+      <div class="w-full px-4 lg:w-1/2 xl:w-5/12 card">
+        <div class="relative rounded-lg bg-[#00DDB5] p-8 shadow-lg sm:p-12">
+          <div class="mb-6">
+            <iframe class="shadow-lg" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31555.099940149405!2d115.22162476909148!3d-8.654646951982869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd240f24881c587%3A0xe8413f111e0aa096!2sInstitut%20Teknologi%20Dan%20Bisnis%20STIKOM%20BALI!5e0!3m2!1sid!2sid!4v1690444546747!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+<!-- contact-us section end -->
     </main>
 
 
-
-
-
-
-
-
-    <footer class="bg-white px-10 py-10 flex justify-evenly items-center lg:flex-row flex-col gap-10">
+    <!-- footer -->
+    <footer class="bg-white border shadow-lg px-10 py-10 flex justify-evenly items-center lg:flex-row flex-col gap-10 ">
         <p class="text-3xl font-bold text-black">@copyright progress 2023</p>
         <ul class="text-3xl font-bold flex gap-4 text-black">
          <li>
@@ -159,13 +312,13 @@
          </li>
          |
          <li>
-          <a href="" class="hover:text-[#00DDB5]">
+          <a href="#about-us" class="hover:text-[#00DDB5]">
            About Us
           </a>
          </li>
          |
          <li>
-          <a href="" class="hover:text-[#00DDB5]">
+          <a href="#contact-us" class="hover:text-[#00DDB5]">
            Contact Us
           </a>
          </li>
@@ -176,7 +329,10 @@
           </a>
          </li>
         </ul>
-       </footer>    
+       </footer>
+       <!-- footer section end -->
+
+       
 <!-- aos -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>

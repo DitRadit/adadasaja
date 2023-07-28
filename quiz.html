@@ -4,6 +4,7 @@
 <head>
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+ <title>Quiz Page</title>
  <!-- google font -->
  <link rel="preconnect" href="https://fonts.googleapis.com">
  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,13 +35,13 @@
  <style type="text/tailwindcss">
   @layer components {
    .nav-item {
-    @apply transition text-black hover:text-[#00DDB5] lg:text-3xl text-xl 
+    @apply transition text-black hover:text-[#00DDB5] lg:text-2xl text-xl 
    }
    /* .point-green {
      @apply  bg-[#00E909] h-[46px] w-[48px] transition hover:bg-green-400 rounded-[100px] cursor-pointer shadow-2xl
    } */
    .point-blue {
-     @apply  bg-[#E44C10] h-[46px] w-[48px] transition hover:bg-green-400 rounded-[100px] cursor-pointer shadow-2xl
+     @apply  bg-[#3333CB] h-[46px] w-[48px] transition hover:bg-[#00DDB5] rounded-[100px] cursor-pointer shadow-2xl
    }
    /* .point-red {
      @apply  bg-red-600 h-[46px] w-[48px] transition hover:bg-red-500 rounded-[100px] cursor-pointer shadow-2xl
@@ -73,7 +74,7 @@
   <header class="bg-[#ffffff] shadow-2xl fixed w-full z-20 px-4" data-aos="fade-down">
     <nav class="flex flex-col lg:flex-row justify-between items-center container mx-auto p-4">
       <div>
-<a href="index.html">
+        <a href="index.html">
         <svg width="100" height="100%" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
           <rect width="512" height="512" fill="url(#pattern0)"/>
           <defs>
@@ -96,11 +97,11 @@
   
         <ul id="menu" class="hidden lg:flex items-center flex-col lg:flex-row gap-8 font-bold ml-0 lg:ml-12">
           <li style="padding: 10px;"><a href="index.html" class="nav-item">HOME</a></li>
-          <li style="padding: 10px;"><a href="" class="nav-item">ABOUT US</a></li>
-          <li style="padding: 10px;"><a href="" class="nav-item">CONTACT US</a></li>
+          <li style="padding: 10px;"><a href="index.html" class="nav-item">ABOUT US</a></li>
+          <li style="padding: 10px;"><a href="index.html" class="nav-item">CONTACT US</a></li>
           <li style="padding: 10px;">
             <a href="quiz.html">
-            <button style="text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);" class="bg-[#FFC41D] text-white px-8 py-4 rounded-2xl font-bold text-2xl transition hover:bg-[#00DDB5] hover:text-white">
+            <button style="text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);" class="bg-[#3333CB] text-white px-8 py-4 rounded-2xl font-bold text-2xl transition hover:bg-[#00DDB5] hover:text-white">
               PLAY
             </button>
           </a>
@@ -114,7 +115,7 @@
   
   <main>
     <!-- game -->
-    <section class="bg-[#3333CB] shadow-2xl min-h-[400px] rounded-b-[100px] px-4">
+    <section class="shadow-2xl min-h-[400px] rounded-b-[100px] px-4">
       <div class="container mx-auto lg:pt-56 pt-72">
         <!-- point -->
         <div class="flex gap-2 justify-evenly">
@@ -158,7 +159,7 @@
     <!-- retired -->
     <section class="bg-[#3333CB] min-h-[400px] rounded-t-[100px] mt-20 flex justify-center items-center flex-col px-4" id="retired-section">
       <div class="container mx-auto flex justify-center items-center flex-col">
-        <p class="text-white text-3xl max-w-[650px] text-center mb-10" id="retired-message">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        <p class="text-white text-4xl font-bold max-w-[650px] text-center mb-10" id="retired-message">Nyerah ni bos?</p>
         <a href="failure.html">
         <button class="text-[46px] font-bold text-white bg-[#FF250D] shadow-2xl transition hover:bg-[#E44C10] hover:text-white px-10 py-4 rounded-2xl" id="retired-button" style="text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);">RETIRED</button>
       </a>
@@ -177,13 +178,13 @@
    </li>
    |
    <li>
-    <a href="" class="hover:text-[#00DDB5]">
+    <a href="index.html" class="hover:text-[#00DDB5]">
      About Us
     </a>
    </li>
    |
    <li>
-    <a href="" class="hover:text-[#00DDB5]">
+    <a href="index.html" class="hover:text-[#00DDB5]">
      Contact Us
     </a>
    </li>
